@@ -43,7 +43,6 @@ function handleInput(e) {
     // Ignore non-letters input and letters that have already guessed
     const key = e.target.value.toLowerCase();
     if (key.match(/^[a-z]+$/i) && !incorrectLetters.includes(`${key}`) && !correctLetters.includes(`${key}`)) {
-        // Check if the letter is in word
         if (word.includes(key)) {
             // Update correct guess
             for (let i = 0; i < word.length; i++) {
